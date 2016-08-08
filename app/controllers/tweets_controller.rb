@@ -2,6 +2,7 @@ class TweetsController < ApplicationController
   before_action :set_tweet, only: [:edit, :update, :destroy]
   
   def index
+    @tweet = Tweet.new
     @tweets = Tweet.order("id").reverse_order
   end
   
