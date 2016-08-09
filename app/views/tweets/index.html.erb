@@ -13,6 +13,7 @@
           <div class="pull-right">
             <%= f.submit "ツイートする", class: 'btn btn-primary' %>
           </div>
+          <span class="count pull-right"></span>
         <% end %>
       </div>
     </div>
@@ -25,7 +26,7 @@
         <div class="timeline-tweet">
           <p><strong>あなた</strong> @you・<%= time_ago_in_words(tweet.created_at, include_seconds: true) %></p>
           <p><%= tweet.content %></p>
-          <%= link_to "編集する", edit_tweet_path(tweet.id), class: 'btn btn-success btn-sm' %>
+          <%= link_to "編集する", edit_tweet_path(tweet.id), method: :get, class: 'btn btn-success btn-sm' %>
           <%= link_to "削除する", tweet_path(tweet.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-danger btn-sm btn' %>
         </div>
       </div>
