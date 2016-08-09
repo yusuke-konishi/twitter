@@ -19,9 +19,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to "ホーム", root_path, class: "navbar-brand" %>
-          <%= link_to "通知", root_path, class: "navbar-brand" %>
-          <%= link_to "メッセージ", root_path, class: "navbar-brand" %>
+          <%= link_to "ホーム", tweets_path, method: :get, class: "navbar-brand" %>
+          <%= link_to "通知", tweets_path, method: :get, class: "navbar-brand" %>
+          <%= link_to "メッセージ", tweets_path, method: :get, class: "navbar-brand" %>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -37,14 +37,14 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><%= link_to "プロフィール", root_path %></li>
-                <li><%= link_to "リスト", root_path %></li>
-                <li><%= link_to "ヘルプ", root_path %></li>
-                <li><%= link_to "設定", root_path %></li>
-                <li><%= link_to "ログアウト", root_path %></li>
+                <li><%= link_to "プロフィール", tweets_path, method: :get %></li>
+                <li><%= link_to "リスト", tweets_path, method: :get %></li>
+                <li><%= link_to "ヘルプ", tweets_path, method: :get %></li>
+                <li><%= link_to "設定", tweets_path, method: :get %></li>
+                <li><%= link_to "ログアウト", tweets_path, method: :get %></li>
               </ul>
             </li>
-            <li><%= link_to "ツイート", new_tweet_path %></li>
+            <li><%= link_to "ツイート", new_tweet_path, method: :get %></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
