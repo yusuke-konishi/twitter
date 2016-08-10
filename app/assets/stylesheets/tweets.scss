@@ -189,6 +189,11 @@ header {
     }
   }
 }
+//Dropdown ボタンを画像に変更
+.dropdown-toggle {
+  background: url("profile32round.jpg") no-repeat center;
+  background-size: 32px 32px;
+}
 //Bootstrap のナビゲーションバーここまで
 
 //ヘッダー下の yield の上に 70px 余白 (navbar-fixed-top 用)
